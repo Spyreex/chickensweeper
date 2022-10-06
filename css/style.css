@@ -1,0 +1,184 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  background-color: pink;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+  background-color: #FFFFFF50;
+}
+button:hover {
+  background-color: #FFFFFF75;
+}
+button:active {
+  background-color: #FFFFFF00;
+}
+
+div.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+div.container div.game-over {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: 5px solid black;
+  position: fixed;
+  top: calc(50% - 10vh);
+  min-height: 20vh;
+  width: 40vw;
+  background-color: white;
+}
+div.container div.game-over h2 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 1rem;
+}
+div.container div.title {
+  padding-top: 3rem;
+}
+div.container div.title h1 {
+  padding: 0;
+  margin: 0;
+}
+div.container div.start-screen {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  width: 50%;
+}
+div.container div.start-screen button {
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+div.container div.settings-screen {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+div.container div.settings-screen h1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+div.container div.settings-screen input {
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+div.container div.settings-screen button {
+  padding: 1rem;
+  border-radius: 3rem;
+  font-size: 1.2rem;
+}
+div.container div.game {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 3rem;
+  width: 100%;
+}
+div.container div.game div > p {
+  font-size: 1.5rem;
+}
+div.container div.game div.timer, div.container div.game div.chicken-counter {
+  flex: 1;
+}
+div.container div.game div.timer {
+  text-align: right;
+}
+div.container div.game div.field {
+  outline: 3px solid black;
+  display: flex;
+  max-height: 80vh;
+  max-width: 80vh;
+  overflow: auto;
+}
+div.container div.game div.field div.row {
+  display: flex;
+  flex-direction: column;
+}
+div.container div.game div.field div.row div.column {
+  min-height: 2rem;
+  min-width: 2rem;
+  display: flex;
+  border: 2px solid gray;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+div.container div.game div.field div.row div.column p {
+  padding: 0;
+  margin: 0;
+}
+div.container div.leaderboard {
+  display: flex;
+}
+div.container div.leaderboard div.table {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  border: 3px solid black;
+  border-radius: 2rem 2rem 0 0;
+}
+div.container div.leaderboard div.table div.head {
+  display: flex;
+  position: relative;
+  font-size: 2rem;
+  border-bottom: 2px solid black;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+div.container div.leaderboard div.table div.head div.back-button {
+  position: absolute;
+  left: 5%;
+}
+div.container div.leaderboard div.table div.top, div.container div.leaderboard div.table div.category-listing div.category {
+  display: flex;
+  flex-direction: row;
+}
+div.container div.leaderboard div.table div.top div.width-row, div.container div.leaderboard div.table div.top div.height-row, div.container div.leaderboard div.table div.top div.odds-row, div.container div.leaderboard div.table div.category-listing div.category div.width-row, div.container div.leaderboard div.table div.category-listing div.category div.height-row, div.container div.leaderboard div.table div.category-listing div.category div.odds-row {
+  width: 30%;
+  padding: 1rem;
+}
+div.container div.leaderboard div.table div.top div.next, div.container div.leaderboard div.table div.category-listing div.category div.next {
+  width: 10%;
+  padding: 1rem;
+}
+div.container div.leaderboard div.table div.top {
+  border-bottom: 2px solid black;
+  background-color: #FFFFFF20;
+}
+div.container div.leaderboard div.table div.category-listing div.category:nth-child(even) {
+  background-color: #00000010;
+}
+div.container div.leaderboard div.table div.category-listing div.category div.next {
+  display: flex;
+  justify-content: flex-end;
+}
+div.container div.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

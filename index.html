@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<title>Chickensweeper</title>
+</head>
+<body>
+	<div class="container">
+		<div class="game-over hidden">
+			<h2>It's fucking RAW! You died to salmonella!</h2>
+		</div>
+		<div class="title">
+			<h1>Chickensweeper</h1>
+		</div>
+		<div class="start-screen">
+			<button id="settings-button">Start</button>
+			<button id="leaderboard-button">Leaderboard</button>
+		</div>
+		<div class="settings-screen hidden">
+			<h1>Settings</h1>
+			<input type="number" placeholder="Width" name="width" id="width">
+			<input type="number" placeholder="Height" name="height" id="height">
+			<input type="number" placeholder="Chicken %" name="odds" id="odds">
+			<button id="start-button">Start</button>
+		</div>
+		<div class="game hidden">
+			<div class="timer">
+				<p></p>
+			</div>
+			<div class="field">
+	
+			</div>
+			<div class="chicken-counter">
+				<p></p>
+			</div>
+		</div>
+		<div class="leaderboard hidden">
+			<div class="table">
+				<div class="head">
+					<div class="back-button">
+						<button class="back"><</button>
+					</div>
+					<span>Leaderboard</span>
+				</div>
+				<div class="top">
+					<div class="width-row">Width</div>
+					<div class="height-row">Height</div>
+					<div class="odds-row">Odds</div>
+					<div class="next"></div>
+				</div>
+				<div class="category-listing">
+					<div class="category">
+						<div class="width-row">10</div>
+						<div class="height-row">10</div>
+						<div class="odds-row">10%</div>
+						<div class="next"><button class="next" id="1">></button></div>
+					</div>
+					<div class="category">
+						<div class="width-row">10</div>
+						<div class="height-row">10</div>
+						<div class="odds-row">10%</div>
+						<div class="next"><button class="next" id="2">></button></div>
+					</div>
+					<div class="category">
+						<div class="width-row">10</div>
+						<div class="height-row">10</div>
+						<div class="odds-row">10%</div>
+						<div class="next"><button class="next" id="2">></button></div>
+					</div>
+					<div class="category">
+						<div class="width-row">10</div>
+						<div class="height-row">10</div>
+						<div class="odds-row">10%</div>
+						<div class="next"><button class="next" id="2">></button></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="./js/chickensweeper.js"></script>
+
+</html>
