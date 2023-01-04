@@ -27,6 +27,9 @@ button {
 	&:active {
 		background-color: #FFFFFF00;
 	}
+	&.hidden {
+		display: none;
+	}
 }
 
 div.container {
@@ -46,7 +49,7 @@ div.container {
 		top: calc(50% - 10vh);
 		min-height: 20vh;
 		width: 40vw;
-		background-color: white;
+		background-color: rgba(255, 255, 255, 0.75);
 
 		h2 {
 			font-size: 2rem;
@@ -56,10 +59,21 @@ div.container {
 	}
 
 	div.title {
+		display: flex;
+		position: relative;
+		align-items: center;
 		padding-top: 3rem;
 		h1 {
 			padding: 0;
 			margin: 0;	
+		}
+		button#return-button {
+			position: absolute;
+			left: -30%;
+		}
+		button#restart-button {
+			position: absolute;
+			right: -30%;
 		}
 	}
 
@@ -142,6 +156,10 @@ div.container {
 					align-items: center;
 
 					p {
+						-webkit-user-select: none; /* Safari */        
+						-moz-user-select: none; /* Firefox */
+						-ms-user-select: none; /* IE10+/Edge */
+						user-select: none; /* Standard */
 						padding: 0;
 						margin: 0;
 					}
@@ -150,9 +168,30 @@ div.container {
 		}
 	}
 
+	div.leaderboard-container {
+		width: 60vw;
+		position: relative;
+	}
+
 	div.leaderboard {
 		display: flex;
-		
+		position: absolute;
+		padding-bottom: 3rem;
+		left: 0;
+		transition: left 1s;
+		transition-timing-function: ease-in-out;
+
+		&.inactive {
+			left: -200%;
+		}
+
+		&#times {
+			left: 200%;
+			&.active {
+				left: 0;
+			}
+		}
+
 		div.table {
 			display: flex;
 			flex-direction: column;
@@ -173,24 +212,32 @@ div.container {
 					position: absolute;
 					left: 5%;
 				}
-			}
 
-			div.top, div.category-listing div.category {
-				display: flex;
-				flex-direction: row;
-				div.width-row, div.height-row, div.odds-row {
-					width: 30%;
-					padding: 1rem;
-				}
-				div.next {
-					width: 10%;
-					padding: 1rem;
+				div#mode {
+					position: absolute;
+					right: 5%;
+					font-size: 1rem;
 				}
 			}
 
 			div.top {
 				border-bottom: 2px solid black;
 				background-color: #FFFFFF20;
+			}
+
+			div.top, div.category-listing div.category {
+				display: flex;
+				flex-direction: row;
+				div.width-row, div.height-row, div.odds-row, div.next {
+					padding: 1rem;
+				}
+				div.width-row, div.height-row, div.odds-row {
+					width: 30%;
+				}
+				div.next {
+					width: 10%;
+				}
+
 			}
 
 			div.category-listing {
@@ -206,11 +253,48 @@ div.container {
 					}
 				}
 			}
+
+			div.top div.place {
+				width: 10%;
+			}
+
+			div.top div.time {
+				width: 70%;
+			}
+
+			div.top div.time, div.top div.place {
+				> p {
+					margin: 0;
+					padding: 1rem;
+				}
+			}
+
+			div.scores {
+				display: flex;
+				flex-direction: row;
+
+				div.times, div.places {
+	
+					div.time, div.place {
+						padding: 1rem;
+	
+						&:nth-child(even) {
+							background-color: #00000010;
+						}
+					}
+				}
+				div.places {
+					width: 10%;
+				}
+				div.times {
+					width: 90%;
+				}
+			}
 		}
 
 	}
 
 	div.hidden {
-		display: none;
+		display: none !important;
 	}
 }

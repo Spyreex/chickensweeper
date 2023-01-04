@@ -14,7 +14,9 @@
 			<h2>It's fucking RAW! You died to salmonella!</h2>
 		</div>
 		<div class="title">
+			<button id="return-button" class="hidden"><</button>
 			<h1>Chickensweeper</h1>
+			<button id="restart-button" class="hidden">↺</button>
 		</div>
 		<div class="start-screen">
 			<button id="settings-button">Start</button>
@@ -38,44 +40,84 @@
 				<p></p>
 			</div>
 		</div>
-		<div class="leaderboard hidden">
-			<div class="table">
-				<div class="head">
-					<div class="back-button">
-						<button class="back"><</button>
+		<div class="leaderboard-container">
+			<div class="leaderboard hidden" id="leaderboard">
+				<div class="table">
+					<div class="head">
+						<div class="back-button">
+							<button id="back-button"><</button>
+						</div>
+						<span>Categories</span>
 					</div>
-					<span>Leaderboard</span>
+					<div class="top">
+						<div class="width-row">Width</div>
+						<div class="height-row">Height</div>
+						<div class="odds-row">Odds</div>
+						<div class="next"></div>
+					</div>
+					<div class="category-listing">
+						<div class="category">
+							<div class="width-row">10</div>
+							<div class="height-row">10</div>
+							<div class="odds-row">10%</div>
+							<div class="next"><button class="next" id="1">></button></div>
+						</div>
+						<div class="category">
+							<div class="width-row">10</div>
+							<div class="height-row">10</div>
+							<div class="odds-row">10%</div>
+							<div class="next"><button class="next" id="2">></button></div>
+						</div>
+						<div class="category">
+							<div class="width-row">10</div>
+							<div class="height-row">10</div>
+							<div class="odds-row">10%</div>
+							<div class="next"><button class="next" id="2">></button></div>
+						</div>
+						<div class="category">
+							<div class="width-row">10</div>
+							<div class="height-row">10</div>
+							<div class="odds-row">10%</div>
+							<div class="next"><button class="next" id="2">></button></div>
+						</div>
+					</div>
 				</div>
-				<div class="top">
-					<div class="width-row">Width</div>
-					<div class="height-row">Height</div>
-					<div class="odds-row">Odds</div>
-					<div class="next"></div>
-				</div>
-				<div class="category-listing">
-					<div class="category">
-						<div class="width-row">10</div>
-						<div class="height-row">10</div>
-						<div class="odds-row">10%</div>
-						<div class="next"><button class="next" id="1">></button></div>
+			</div>
+			<div class="leaderboard hidden" id="times">
+				<div class="table">
+					<div class="head">
+						<div class="back-button">
+							<button id="back-to-leaderboard-button"><</button>
+						</div>
+						<span>Times</span>
+						<div id="mode">10x10x10</div>
 					</div>
-					<div class="category">
-						<div class="width-row">10</div>
-						<div class="height-row">10</div>
-						<div class="odds-row">10%</div>
-						<div class="next"><button class="next" id="2">></button></div>
+					<div class="top">
+						<div class="place"><p>#</p></div>
+						<div class="time"><p>Time</p></div>
 					</div>
-					<div class="category">
-						<div class="width-row">10</div>
-						<div class="height-row">10</div>
-						<div class="odds-row">10%</div>
-						<div class="next"><button class="next" id="2">></button></div>
-					</div>
-					<div class="category">
-						<div class="width-row">10</div>
-						<div class="height-row">10</div>
-						<div class="odds-row">10%</div>
-						<div class="next"><button class="next" id="2">></button></div>
+					<div class="times-container">
+						<div class="scores hidden" id="t10x10x10">
+							<div class="places">
+								<div class="place">1</div>
+								<div class="place">2</div>
+								<div class="place">3</div>
+								<div class="place">4</div>
+								
+							</div>
+							<div class="times">
+								<div class="time">100</div>
+								<div class="time">100</div>
+								<div class="time">100</div>
+								<div class="time">100</div>
+							</div>
+						</div>
+						<div class="times hidden" id="t20x20x15">
+							<div class="time">100</div>
+							<div class="time">100</div>
+							<div class="time">100</div>
+							<div class="time">100</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -84,5 +126,24 @@
 </body>
 
 <script src="./js/chickensweeper.js"></script>
+<script src="./js/leaderboard.js"></script>
 
 </html>
+
+				<!-- <div class="records">
+					<div class="top">
+						<div class="time">Time</div>
+					</div>
+					<div class="times hidden" id="10x10x10">
+						<div class="time">100</div>
+						<div class="time">100</div>
+						<div class="time">100</div>
+						<div class="time">100</div>
+					</div>
+					<div class="times" id="20x10x10">
+						<div class="time">100</div>
+						<div class="time">100</div>
+						<div class="time">100</div>
+						<div class="time">100</div>
+					</div>
+				</div> -->
